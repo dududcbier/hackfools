@@ -237,12 +237,15 @@
 
       function myOnLoad() {
 
+          var fonts = ['Georgia, serif','"Palatino Linotype", "Book Antiqua", Palatino, serif','"Times New Roman", Times, serif','Arial, Helvetica, sans-serif','"Arial Black", Gadget, sans-serif','"Comic Sans MS", cursive, sans-serif','Impact, Charcoal, sans-serif','"Lucida Sans Unicode", "Lucida Grande", sans-serif','Tahoma, Geneva, sans-serif','"Trebuchet MS", Helvetica, sans-serif','Verdana, Geneva, sans-serif','"Courier New", Courier, monospace','"Lucida Console", Monaco, monospace']
+
           var items = ["title", "subtitle", "date", "all", "background", "navbar", "navbar-text","navbar-options"];
 
           items.forEach(function(item){
             document.getElementById(item).style.color = '#'+Math.floor(Math.random()*16777215).toString(16);
           });
 
+          document.body.style.fontFamily = fonts[Math.floor(Math.random() * 12)];
           document.getElementById("background").style.backgroundColor = '#'+Math.floor(Math.random()*16777215).toString(16);
           document.getElementById("navbar").style.backgroundColor = '#'+Math.floor(Math.random()*16777215).toString(16);
 
